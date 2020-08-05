@@ -15,6 +15,7 @@ ipsec pki --pub --in ~/pki/private/server-key.pem --type rsa \
         --flag serverAuth --flag ikeIntermediate --outform pem \
     >  ~/pki/certs/server-cert.pem
 sudo cp -r ~/pki/* /etc/ipsec.d/
+sudo systemctl restart strongswan
 sudo ufw allow OpenSSH
 sudo ufw enable
 sudo ufw allow 500,4500/udp
