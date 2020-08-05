@@ -20,6 +20,7 @@ Now go back to the clone directory and run these 2 commands
     cp sysctl.conf /etc/ufw/
     cd ..
     rm -r VPN
+    chmod +x setup.sh
 
 Now use ./setup to run the bash file and turn on your VPN. Dont forget to edit the IP address of your VPS to the ipsec.conf and change username and password in ipsec.secrets.
 Copy the certificate (shown in the end) including begin and end and save it on your system in file named ca-cert.pem 
