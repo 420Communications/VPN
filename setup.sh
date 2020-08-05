@@ -20,4 +20,5 @@ sudo ufw allow OpenSSH
 sudo ufw enable
 sudo ufw allow 500,4500/udp
 ip route | grep default
-  
+sudo ufw disable
+sudo ufw enable  
