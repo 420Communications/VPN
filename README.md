@@ -46,6 +46,6 @@ now go to /etc/ufw and edit these 2 files:
       # Ensure the following line is set
       net/ipv4/conf/all/accept_redirects=0
 
-      # Add the following lines along with the others (Lines in step B)
+      # Add the following lines along with the others (Lines in step 2)
       net/ipv4/conf/all/send_redirects=0
       net/ipv4/ip_no_pmtu_disc=1
