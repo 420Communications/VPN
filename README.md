@@ -5,12 +5,12 @@ VPN Configuration Ubuntu 18.0.4
 Clone the repo in /etc/
 run the following commands to make sure that the files are at the right directories
 
-cd VPN/
-cp setup.sh /etc/
-cp ipsec.conf /etc/
-cp ipsec.secrets /etc/
-cd ..
-rm -r VPN
+    cd VPN/
+    cp setup.sh /etc/
+    cp ipsec.conf /etc/
+    cp ipsec.secrets /etc/
+    cd ..
+    rm -r VPN
 
 now go to /etc/ufw and edit these 2 files:
 
