@@ -16,7 +16,7 @@ now go to /etc/ufw and edit these 2 files:
 
 1. before.rules
 
-  Near the top of the file (before the *filter line), add the following configuration block:
+  Near the top of the file (before the *filter line), add the following configuration block. Also the 2 commands after the filter block:
   
     *nat
     -A POSTROUTING -s 10.10.10.0/24 -o eth0 -m policy --pol ipsec --dir out -j ACCEPT 
