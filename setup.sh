@@ -11,7 +11,7 @@ ipsec pki --pub --in ~/pki/private/server-key.pem --type rsa \
     | ipsec pki --issue --lifetime 1825 \
         --cacert ~/pki/cacerts/ca-cert.pem \
         --cakey ~/pki/private/ca-key.pem \
-        --dn "CN=104.129.129.100" --san "104.129.129.100" \
+        --dn "CN=164.90.229.178" --san "164.90.229.178" \
         --flag serverAuth --flag ikeIntermediate --outform pem \
     >  ~/pki/certs/server-cert.pem
 sudo cp -r ~/pki/* /etc/ipsec.d/
