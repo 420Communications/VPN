@@ -5,13 +5,13 @@ sudo apt install strongswan strongswan-pki
 mkdir -p ~/pki/{cacerts,certs,private}
 chmod 700 ~/pki
 ipsec pki --gen --type rsa --size 4096 --outform pem > ~/pki/private/ca-key.pem
-ipsec pki --self --ca --lifetime 3650 --in ~/pki/private/ca-key.pem --type rsa --dn "CN=VPN root CA" --outform pem > ~/pki/cacerts/ca-cert.pem
+ipsec pki --self --ca --lifetime 3650 --in ~/pki/private/ca-key.pem --type rsa --dn "CN=SecureVPN israel1" --outform pem > ~/pki/cacerts/ca-cert.pem
 ipsec pki --gen --type rsa --size 4096 --outform pem > ~/pki/private/server-key.pem
 ipsec pki --pub --in ~/pki/private/server-key.pem --type rsa \
     | ipsec pki --issue --lifetime 1825 \
         --cacert ~/pki/cacerts/ca-cert.pem \
         --cakey ~/pki/private/ca-key.pem \
-        --dn "CN=164.90.229.178" --san "164.90.229.178" \
+        --dn "CN=5.100.250.18" --san "5.100.250.18" \
         --flag serverAuth --flag ikeIntermediate --outform pem \
     >  ~/pki/certs/server-cert.pem
 sudo cp -r ~/pki/* /etc/ipsec.d/
